@@ -1,0 +1,5 @@
+BASE_URL = "https://stellarburgers.education-services.ru/"
+LOGIN_PAGE_URL = "https://stellarburgers.education-services.ru/login"
+ORDERS_LIST_URL = "https://stellarburgers.education-services.ru/feed"
+PROFILE_URL = "https://stellarburgers.education-services.ru/account/profile"
+ORDER_HISTORY_URL = "https://stellarburgers.education-services.ru/account/order-history"

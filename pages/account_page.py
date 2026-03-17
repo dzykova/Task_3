@@ -10,7 +10,7 @@ class AccountPage(BasePage):
     
     @allure.step('Ждем загрузки "Профиль" табы')
     def wait_profile_tab_loading(self):
-        self._wait.until(lambda d: "/profile" in d.current_url)
+        self.wait_for_loading("/profile")
     
     @allure.step('Нажимаем на кнопку "История заказов"')
     def click_order_history_button(self):

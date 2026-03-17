@@ -38,5 +38,5 @@ class OrdersPage(BasePage):
     @allure.step('Получаем номер заказа в секции "В работе"')
     def get_in_progress_order(self):
         self.wait_for_invisability(BasePageLocators.loading)
-        self.wait()
+        self.wait_for_visability(OrdersPageLocators.in_progress_order)
         return self.get_text(OrdersPageLocators.in_progress_order)

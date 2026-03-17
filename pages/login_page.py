@@ -52,7 +52,7 @@ class LoginPage(BasePage):
 
     @allure.step('Ждем загрузки страницы входа в аккаунт')
     def wait_login_page_loading(self):
-        self._wait.until(lambda d: "/login" in d.current_url)
+        self.wait_for_loading("/login")
     
 
     

@@ -1,7 +1,6 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import allure
-import time
 
 
 class BasePage:
@@ -48,12 +47,12 @@ class BasePage:
     def wait_for_visability(self, locator):
         return self._wait.until(EC.visibility_of_element_located(locator))
 
+    def wait_for_loading(self, path):
+        return self._wait.until(lambda d: path in d.current_url)
+
     def is_element_visible(self, locator):
         return self.driver.find_element(*locator).is_displayed()
-    
-    def wait(self):
-        time.sleep(3)
-    
+      
     def drag_and_drop(self,element,place):
         self.driver.execute_script("""
         function simulateDragDrop(sourceNode, destinationNode) {
